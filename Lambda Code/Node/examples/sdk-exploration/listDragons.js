@@ -11,12 +11,14 @@
 
 var AWS = require("aws-sdk");
 
+const region = "eu-west-1"; // Ireland
+
 const s3 = new AWS.S3({
-    region: 'us-east-1'
+    region
 });
 
 const ssm = new AWS.SSM({
-    region: 'us-east-1'
+    region
 });
 
 async function readDragons() {
